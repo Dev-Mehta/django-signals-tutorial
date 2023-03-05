@@ -1,0 +1,13 @@
+name: Code Coverage
+on:
+  pull_request:
+    branches: [ "master", "main" ]
+
+  push:
+    branches: [ "master", "main" ]
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.1
